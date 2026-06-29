@@ -3,106 +3,150 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>TUSR Control Interface</title>
+  <title>Treekian Government Services Portal</title>
   <link rel="stylesheet" href="style.css"/>
 </head>
 
 <body>
 
-  <!-- SYSTEM TOP BAR -->
-  <div class="topbar">
-    <div class="left">🟢 TUSR SYSTEM ONLINE</div>
-    <div class="right">SESSION: ACTIVE</div>
+<!-- TOP HEADER -->
+<header class="header">
+  <div class="brand">
+    🏛️ Treekian Government Services Portal
   </div>
 
-  <!-- MAIN GRID -->
+  <div class="status">
+    🟢 System Operational | TST UTC+12
+  </div>
+</header>
+
+<!-- NAV BAR -->
+<nav class="nav">
+  <a href="#services">Services</a>
+  <a href="#nation">Nation</a>
+  <a href="#defence">Defence</a>
+  <a href="#systems">Systems</a>
+</nav>
+
+<!-- HERO STRIP -->
+<section class="hero">
+  <img src="flag.png" class="flag"/>
+  <div>
+    <h1>Treekian Union of Socialist Republics</h1>
+    <p>Official Public Services & National Information Portal</p>
+  </div>
+</section>
+
+<!-- QUICK SERVICES GRID -->
+<section id="services" class="section">
+  <h2>Public Services</h2>
+
   <div class="grid">
+    <div class="card">🪪 Citizen Registration</div>
+    <div class="card">📄 Government Records</div>
+    <div class="card">💰 Treasury & Currency (₸ TRK)</div>
+    <div class="card">📡 Communications Office</div>
+  </div>
+</section>
 
-    <!-- STATUS PANEL -->
-    <div class="panel large">
-      <div class="panel-title">NATIONAL STATUS</div>
+<!-- NATIONAL SNAPSHOT -->
+<section id="nation" class="section alt">
+  <h2>National Snapshot</h2>
 
-      <div class="status-grid">
-        <div class="stat">POPULATION <b>14</b></div>
-        <div class="stat">CURRENCY <b>₸</b></div>
-        <div class="stat">CODE <b>TRK</b></div>
-        <div class="stat">MODE <b>SOCIALIST</b></div>
-      </div>
+  <div class="grid stats">
+    <div class="card"><b>Population</b> 14</div>
+    <div class="card"><b>Leader</b> President William</div>
+    <div class="card"><b>Ideology</b> Socialism</div>
+    <div class="card"><b>Languages</b> English / Russian</div>
+    <div class="card"><b>Currency</b> Treek (₸)</div>
+    <div class="card"><b>ISO Code</b> TRK</div>
+  </div>
+</section>
 
-      <img src="flag.png" class="flag"/>
+<!-- DEFENCE -->
+<section id="defence" class="section">
+  <h2>Defence Forces</h2>
+
+  <div class="grid">
+    <div class="card">
+      <b>Army</b>
+      3 personnel + armored equipment
     </div>
 
-    <!-- SYSTEM MODULES -->
-    <div class="panel">
-      <div class="panel-title">GOV MODULES</div>
-
-      <button class="module">📡 Communications</button>
-      <button class="module">🪪 Citizen Grid</button>
-      <button class="module">💰 Treasury Core</button>
-      <button class="module">📄 Records Vault</button>
+    <div class="card">
+      <b>Air Force</b>
+      Paper aircraft division
     </div>
 
-    <!-- DEFENCE CORE -->
-    <div class="panel">
-      <div class="panel-title">DEFENCE CORE</div>
+    <div class="card">
+      <b>Navy</b>
+      Paper vessel unit
+    </div>
+  </div>
+</section>
 
-      <div class="mini">
-        <b>ARMY</b> 3 UNITS ACTIVE
-      </div>
-      <div class="mini">
-        <b>AIR</b> PAPER DIVISION
-      </div>
-      <div class="mini">
-        <b>NAVY</b> 1 VESSEL
-      </div>
+<!-- SYSTEMS -->
+<section id="systems" class="section alt">
+  <h2>National Systems</h2>
+
+  <div class="system-grid">
+
+    <div class="system">
+      <h3>📡 Communications</h3>
+      <p>Active</p>
     </div>
 
-    <!-- SYSTEM ACTION -->
-    <div class="panel anthem">
-      <div class="panel-title">SYSTEM BROADCAST</div>
+    <div class="system">
+      <h3>📊 Civil Registry</h3>
+      <p>Active</p>
+    </div>
 
-      <button id="anthemBtn">▶ INITIATE NATIONAL ANTHEM</button>
+    <div class="system">
+      <h3>💰 Treasury</h3>
+      <p>Synced</p>
+    </div>
+
+    <div class="system anthem">
+      <h3>🎵 National Anthem</h3>
+
+      <button id="anthemBtn">Play Anthem</button>
       <audio id="anthemAudio" src="anthem.mp3"></audio>
-
-      <div class="hint">Audio broadcast subsystem</div>
-    </div>
-
-    <!-- LIVE FEED -->
-    <div class="panel wide">
-      <div class="panel-title">LIVE STATE FEED</div>
-
-      <div class="feed">
-        <div>🟢 Government systems stable</div>
-        <div>🟡 Air division status: experimental</div>
-        <div>🟢 Treasury synced</div>
-        <div>🟢 Civil registry operational</div>
-      </div>
     </div>
 
   </div>
+</section>
 
-  <script>
-    const btn = document.getElementById("anthemBtn");
-    const audio = document.getElementById("anthemAudio");
+<!-- FOOTER SEAL -->
+<footer class="footer">
+  <img src="css.png"/>
+  <div>
+    Committee of State Security<br/>
+    Official Authorization Seal
+  </div>
+</footer>
 
-    let playing = false;
+<script>
+  const btn = document.getElementById("anthemBtn");
+  const audio = document.getElementById("anthemAudio");
 
-    btn.onclick = () => {
-      if (!playing) {
-        audio.play();
-        btn.innerText = "⏸ STOP BROADCAST";
-      } else {
-        audio.pause();
-        btn.innerText = "▶ INITIATE NATIONAL ANTHEM";
-      }
-      playing = !playing;
-    };
+  let playing = false;
 
-    audio.onended = () => {
-      playing = false;
-      btn.innerText = "▶ INITIATE NATIONAL ANTHEM";
-    };
-  </script>
+  btn.onclick = () => {
+    if (!playing) {
+      audio.play();
+      btn.innerText = "Stop Anthem";
+    } else {
+      audio.pause();
+      btn.innerText = "Play Anthem";
+    }
+    playing = !playing;
+  };
+
+  audio.onended = () => {
+    playing = false;
+    btn.innerText = "Play Anthem";
+  };
+</script>
 
 </body>
 </html>
