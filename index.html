@@ -1,152 +1,187 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Treekian Government Services Portal</title>
-  <link rel="stylesheet" href="style.css"/>
-</head>
+*{
 
-<body>
+margin:0;
+padding:0;
+box-sizing:border-box;
 
-<!-- TOP HEADER -->
-<header class="header">
-  <div class="brand">
-    🏛️ Treekian Government Services Portal
-  </div>
+}
 
-  <div class="status">
-    🟢 System Operational | TST UTC+12
-  </div>
-</header>
+body{
 
-<!-- NAV BAR -->
-<nav class="nav">
-  <a href="#services">Services</a>
-  <a href="#nation">Nation</a>
-  <a href="#defence">Defence</a>
-  <a href="#systems">Systems</a>
-</nav>
+font-family:Arial,Helvetica,sans-serif;
+background:#eeeeee;
 
-<!-- HERO STRIP -->
-<section class="hero">
-  <img src="flag.png" class="flag"/>
-  <div>
-    <h1>Treekian Union of Socialist Republics</h1>
-    <p>Official Public Services & National Information Portal</p>
-  </div>
-</section>
+}
 
-<!-- QUICK SERVICES GRID -->
-<section id="services" class="section">
-  <h2>Public Services</h2>
+header{
 
-  <div class="grid">
-    <div class="card">🪪 Citizen Registration</div>
-    <div class="card">📄 Government Records</div>
-    <div class="card">💰 Treasury & Currency (₸ TRK)</div>
-    <div class="card">📡 Communications Office</div>
-  </div>
-</section>
+background:#7d0000;
+color:white;
 
-<!-- NATIONAL SNAPSHOT -->
-<section id="nation" class="section alt">
-  <h2>National Snapshot</h2>
+}
 
-  <div class="grid stats">
-    <div class="card"><b>Population</b> 14</div>
-    <div class="card"><b>Leader</b> President William</div>
-    <div class="card"><b>Ideology</b> Socialism</div>
-    <div class="card"><b>Languages</b> English / Russian</div>
-    <div class="card"><b>Currency</b> Treek (₸)</div>
-    <div class="card"><b>ISO Code</b> TRK</div>
-  </div>
-</section>
+.topbar{
 
-<!-- DEFENCE -->
-<section id="defence" class="section">
-  <h2>Defence Forces</h2>
+display:flex;
+align-items:center;
+padding:20px 40px;
 
-  <div class="grid">
-    <div class="card">
-      <b>Army</b>
-      3 personnel + armored equipment
-    </div>
+}
 
-    <div class="card">
-      <b>Air Force</b>
-      Paper aircraft division
-    </div>
+.topbar h1{
 
-    <div class="card">
-      <b>Navy</b>
-      Paper vessel unit
-    </div>
-  </div>
-</section>
+font-size:30px;
 
-<!-- SYSTEMS -->
-<section id="systems" class="section alt">
-  <h2>National Systems</h2>
+}
 
-  <div class="system-grid">
+.seal{
 
-    <div class="system">
-      <h3>📡 Communications</h3>
-      <p>Active</p>
-    </div>
+width:90px;
+margin-right:20px;
 
-    <div class="system">
-      <h3>📊 Civil Registry</h3>
-      <p>Active</p>
-    </div>
+}
 
-    <div class="system">
-      <h3>💰 Treasury</h3>
-      <p>Synced</p>
-    </div>
+nav{
 
-    <div class="system anthem">
-      <h3>🎵 National Anthem</h3>
+background:#510000;
+display:flex;
 
-      <button id="anthemBtn">Play Anthem</button>
-      <audio id="anthemAudio" src="anthem.mp3"></audio>
-    </div>
+}
 
-  </div>
-</section>
+nav a{
 
-<!-- FOOTER SEAL -->
-<footer class="footer">
-  <img src="css.png"/>
-  <div>
-    Committee of State Security<br/>
-    Official Authorization Seal
-  </div>
-</footer>
+color:white;
+text-decoration:none;
+padding:18px 25px;
+transition:.3s;
 
-<script>
-  const btn = document.getElementById("anthemBtn");
-  const audio = document.getElementById("anthemAudio");
+}
 
-  let playing = false;
+nav a:hover{
 
-  btn.onclick = () => {
-    if (!playing) {
-      audio.play();
-      btn.innerText = "Stop Anthem";
-    } else {
-      audio.pause();
-      btn.innerText = "Play Anthem";
-    }
-    playing = !playing;
-  };
+background:#960000;
 
-  audio.onended = () => {
-    playing = false;
-    btn.innerText = "Play Anthem";
-  };
-</script>
+}
 
-</body>
-</html>
+.hero{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:60px;
+background:white;
+
+}
+
+.hero h2{
+
+font-size:48px;
+
+}
+
+.hero p{
+
+margin:20px 0;
+
+}
+
+.hero button{
+
+padding:15px 35px;
+background:#7d0000;
+color:white;
+border:none;
+font-size:16px;
+cursor:pointer;
+
+}
+
+.hero button:hover{
+
+background:#b40000;
+
+}
+
+.hero img{
+
+width:350px;
+border:5px solid #ddd;
+
+}
+
+.container{
+
+max-width:1400px;
+margin:auto;
+padding:40px;
+
+}
+
+.cards{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:20px;
+
+}
+
+.card{
+
+background:white;
+padding:25px;
+border-left:6px solid darkred;
+box-shadow:0 3px 10px rgba(0,0,0,.15);
+
+}
+
+.card h3{
+
+margin-bottom:10px;
+
+}
+
+.grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+margin-top:20px;
+
+}
+
+.grid div{
+
+background:white;
+padding:25px;
+box-shadow:0 3px 10px rgba(0,0,0,.15);
+
+}
+
+section{
+
+margin-bottom:60px;
+
+}
+
+.description{
+
+margin-top:30px;
+line-height:1.8;
+
+}
+
+footer{
+
+background:#1f1f1f;
+color:white;
+text-align:center;
+padding:35px;
+
+}
+
+footer img{
+
+width:80px;
+margin-bottom:15px;
+
+}
