@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Treekia — Official Portal</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="logo">TUSR</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#government">Government</a>
+      <a href="#forces">Armed Forces</a>
+      <a href="#culture">Culture</a>
+      <a href="#anthem">Anthem</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <img src="flag.png" class="flag" alt="Treekia Flag"/>
+    <h1>Treekian Union of Socialist Republics</h1>
+    <p>Official Portal of Treekia — A Socialist Micronation in New Zealand</p>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <h2>Overview</h2>
+    <p>
+      Treekia (TUSR) is a self-declared micronation located in New Zealand.
+      It operates under a socialist framework and is led by President William,
+      “a guy with a dream.”
+    </p>
+
+    <div class="grid">
+      <div class="card"><b>Population</b><span>14</span></div>
+      <div class="card"><b>Currency</b><span>Treek (₸)</span></div>
+      <div class="card"><b>ISO Code</b><span>TRK</span></div>
+      <div class="card"><b>Location</b><span>New Zealand</span></div>
+    </div>
+  </section>
+
+  <!-- GOVERNMENT -->
+  <section id="government" class="section dark">
+    <h2>Government</h2>
+
+    <div class="grid">
+      <div class="card"><b>Leader</b><span>President William</span></div>
+      <div class="card"><b>Ideology</b><span>Socialism</span></div>
+      <div class="card"><b>Languages</b><span>English, Russian</span></div>
+    </div>
+  </section>
+
+  <!-- ARMED FORCES -->
+  <section id="forces" class="section">
+    <h2>Armed Forces</h2>
+
+    <div class="grid">
+      <div class="card">
+        <b>Army</b>
+        <span>3 personnel<br/>T-55, BTR-80, BMP-1, T-60 (on order)</span>
+      </div>
+
+      <div class="card">
+        <b>Air Force</b>
+        <span>Paper aircraft + MiG-15 photo</span>
+      </div>
+
+      <div class="card">
+        <b>Navy</b>
+        <span>One paper boat</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CULTURE -->
+  <section id="culture" class="section dark">
+    <h2>Culture & Identity</h2>
+
+    <div class="grid">
+      <div class="card"><b>National Animal</b><span>Yellow-crested warbler</span></div>
+      <div class="card"><b>National Dish</b><span>My mate's dad's pizza</span></div>
+      <div class="card"><b>National Sport</b><span>Football</span></div>
+      <div class="card"><b>Driving Side</b><span>Left</span></div>
+    </div>
+  </section>
+
+  <!-- ANTHEM -->
+  <section id="anthem" class="anthem">
+    <h2>National Anthem</h2>
+
+    <button id="anthemBtn">▶ Play Anthem of Treekia</button>
+
+    <audio id="anthemAudio" src="anthem.mp3"></audio>
+
+    <p class="anthem-note">
+      Treekian National Anthem — Official State Recording
+    </p>
+  </section>
+
+  <!-- FOOTER SEAL -->
+  <footer class="footer">
+    <img src="css.png" alt="Seal"/>
+    <p>
+      SEAL OF APPROVAL – COMMITTEE OF STATE SECURITY<br/>
+      Знак одобрения – Комитет государственной безопасности
+    </p>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    const btn = document.getElementById("anthemBtn");
+    const audio = document.getElementById("anthemAudio");
+
+    let playing = false;
+
+    btn.addEventListener("click", () => {
+      if (!playing) {
+        audio.play();
+        btn.innerText = "⏸ Pause Anthem";
+      } else {
+        audio.pause();
+        btn.innerText = "▶ Play Anthem of Treekia";
+      }
+      playing = !playing;
+    });
+
+    audio.addEventListener("ended", () => {
+      playing = false;
+      btn.innerText = "▶ Play Anthem of Treekia";
+    });
+  </script>
+
+</body>
+</html>
