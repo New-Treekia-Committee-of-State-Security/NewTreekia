@@ -3,156 +3,105 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>New Treekian State Portal</title>
+  <title>TUSR Control Interface</title>
   <link rel="stylesheet" href="style.css"/>
 </head>
 
 <body>
 
-  <!-- TOP BAR -->
-  <header class="topbar">
-    <div class="brand">
-      🏛️ New Treekian Government Portal
-    </div>
-    <nav>
-      <a href="#dashboard">Dashboard</a>
-      <a href="#services">Services</a>
-      <a href="#defence">Defence</a>
-      <a href="#culture">Culture</a>
-      <a href="#systems">Systems</a>
-    </nav>
-  </header>
-
-  <!-- ALERT BAR -->
-  <div class="alert">
-    📢 Official Notice: Treekian Union systems are operating normally.
+  <!-- SYSTEM TOP BAR -->
+  <div class="topbar">
+    <div class="left">🟢 TUSR SYSTEM ONLINE</div>
+    <div class="right">SESSION: ACTIVE</div>
   </div>
 
-  <!-- HERO -->
-  <section class="hero">
-    <img src="flag.png" class="flag" alt="Flag"/>
-    <h1>New Treekian State Portal</h1>
-    <p>Official Government Information System</p>
-  </section>
+  <!-- MAIN GRID -->
+  <div class="grid">
 
-  <!-- DASHBOARD -->
-  <section id="dashboard" class="section">
-    <h2>National Dashboard</h2>
+    <!-- STATUS PANEL -->
+    <div class="panel large">
+      <div class="panel-title">NATIONAL STATUS</div>
 
-    <div class="grid">
-      <div class="card stat">
-        <span>Population</span>
-        <b>14</b>
+      <div class="status-grid">
+        <div class="stat">POPULATION <b>14</b></div>
+        <div class="stat">CURRENCY <b>₸</b></div>
+        <div class="stat">CODE <b>TRK</b></div>
+        <div class="stat">MODE <b>SOCIALIST</b></div>
       </div>
 
-      <div class="card stat">
-        <span>Currency</span>
-        <b>₸ Treek</b>
-      </div>
+      <img src="flag.png" class="flag"/>
+    </div>
 
-      <div class="card stat">
-        <span>ISO Code</span>
-        <b>TRK</b>
-      </div>
+    <!-- SYSTEM MODULES -->
+    <div class="panel">
+      <div class="panel-title">GOV MODULES</div>
 
-      <div class="card stat">
-        <span>Government Type</span>
-        <b>Socialist Republic</b>
+      <button class="module">📡 Communications</button>
+      <button class="module">🪪 Citizen Grid</button>
+      <button class="module">💰 Treasury Core</button>
+      <button class="module">📄 Records Vault</button>
+    </div>
+
+    <!-- DEFENCE CORE -->
+    <div class="panel">
+      <div class="panel-title">DEFENCE CORE</div>
+
+      <div class="mini">
+        <b>ARMY</b> 3 UNITS ACTIVE
+      </div>
+      <div class="mini">
+        <b>AIR</b> PAPER DIVISION
+      </div>
+      <div class="mini">
+        <b>NAVY</b> 1 VESSEL
       </div>
     </div>
-  </section>
 
-  <!-- SERVICES -->
-  <section id="services" class="section dark">
-    <h2>Government Services</h2>
+    <!-- SYSTEM ACTION -->
+    <div class="panel anthem">
+      <div class="panel-title">SYSTEM BROADCAST</div>
 
-    <div class="grid">
-      <div class="card">📄 National Records</div>
-      <div class="card">🪪 Citizen Registry</div>
-      <div class="card">💰 Treasury System</div>
-      <div class="card">📡 Communications Office</div>
-    </div>
-  </section>
-
-  <!-- DEFENCE -->
-  <section id="defence" class="section">
-    <h2>Defence Command</h2>
-
-    <div class="grid">
-      <div class="card">
-        <b>Army</b>
-        <span>3 personnel + armored units</span>
-      </div>
-
-      <div class="card">
-        <b>Air Force</b>
-        <span>Paper aircraft division</span>
-      </div>
-
-      <div class="card">
-        <b>Navy</b>
-        <span>1 paper vessel fleet</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- CULTURE -->
-  <section id="culture" class="section dark">
-    <h2>Cultural Identity</h2>
-
-    <div class="grid">
-      <div class="card"><b>Language</b> English / Russian</div>
-      <div class="card"><b>Sport</b> Football</div>
-      <div class="card"><b>National Dish</b> Pizza (classified recipe)</div>
-      <div class="card"><b>Animal</b> Yellow-crested Warbler</div>
-    </div>
-  </section>
-
-  <!-- SYSTEMS (ANTHEM + STATE FUNCTIONS) -->
-  <section id="systems" class="section">
-    <h2>State Systems</h2>
-
-    <div class="anthem-box">
-      <h3>🎵 National Anthem System</h3>
-
-      <button id="anthemBtn">▶ Launch Anthem Broadcast</button>
+      <button id="anthemBtn">▶ INITIATE NATIONAL ANTHEM</button>
       <audio id="anthemAudio" src="anthem.mp3"></audio>
 
-      <p>Press to initiate official Treekian broadcast sequence.</p>
+      <div class="hint">Audio broadcast subsystem</div>
     </div>
-  </section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <img src="css.png" alt="Seal"/>
-    <p>
-      COMMITTEE OF STATE SECURITY<br/>
-      Official Government Seal of Authorization
-    </p>
-  </footer>
+    <!-- LIVE FEED -->
+    <div class="panel wide">
+      <div class="panel-title">LIVE STATE FEED</div>
 
-  <!-- SCRIPT -->
+      <div class="feed">
+        <div>🟢 Government systems stable</div>
+        <div>🟡 Air division status: experimental</div>
+        <div>🟢 Treasury synced</div>
+        <div>🟢 Civil registry operational</div>
+      </div>
+    </div>
+
+  </div>
+
   <script>
     const btn = document.getElementById("anthemBtn");
     const audio = document.getElementById("anthemAudio");
 
     let playing = false;
 
-    btn.addEventListener("click", () => {
+    btn.onclick = () => {
       if (!playing) {
         audio.play();
-        btn.innerText = "⏸ Stop Broadcast";
+        btn.innerText = "⏸ STOP BROADCAST";
       } else {
         audio.pause();
-        btn.innerText = "▶ Launch Anthem Broadcast";
+        btn.innerText = "▶ INITIATE NATIONAL ANTHEM";
       }
       playing = !playing;
-    });
+    };
 
-    audio.addEventListener("ended", () => {
+    audio.onended = () => {
       playing = false;
-      btn.innerText = "▶ Launch Anthem Broadcast";
-    });
+      btn.innerText = "▶ INITIATE NATIONAL ANTHEM";
+    };
   </script>
 
 </body>
