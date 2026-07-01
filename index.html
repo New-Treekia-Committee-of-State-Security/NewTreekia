@@ -3,304 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Government of the Treekian Union of Socialist Republics</title>
-
+    <title>Home | New Treekian Union</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
-
-<body>
-
+<body data-page="home">
 <header>
-
     <div class="top-header">
-
-        <img src="coatofarms.png" alt="Coat of Arms" class="coa">
-
-        <div class="title">
-
-            <h1>Government of the Treekian Union of Socialist Republics</h1>
-            <p>Official Government Portal</p>
-
-        </div>
-
+        <a href="index.html" class="brand-link" aria-label="Home"><img src="coatofarms.png" class="coa" alt="Coat of Arms" onerror="this.style.display='none'"></a>
+        <div class="title"><h1 data-i18n="siteTitle">Government of the New Treekian Union of the Socialist Republics</h1><p data-i18n="portalTitle">Official Government Portal</p></div>
+        <button class="mobile-menu" type="button" aria-expanded="false" aria-controls="main-nav" data-i18n="menu">Menu</button>
     </div>
-
-    <nav>
-
-        <a href="index.html" class="active">Home</a>
-
-        <a href="government.html">Government</a>
-
-        <a href="defence.html">Defence</a>
-
-        <a href="economy.html">Economy</a>
-
-        <a href="culture.html">Culture</a>
-
-        <a href="constitution.html">Constitution</a>
-
-        <a href="login.html" class="portal-button">Staff Portal</a>
-
+    <nav id="main-nav">
+        <a href="index.html" data-nav="home" data-i18n="navHome">Home</a>
+        <a href="government.html" data-nav="government" data-i18n="navGovernment">Government</a>
+        <a href="officials.html" data-nav="officials" data-i18n="navOfficials">Officials</a>
+        <a href="defence.html" data-nav="defence" data-i18n="navDefence">Defence</a>
+        <a href="economy.html" data-nav="economy" data-i18n="navEconomy">Economy</a>
+        <a href="culture.html" data-nav="culture" data-i18n="navCulture">Culture</a>
+        <a href="constitution.html" data-nav="constitution" data-i18n="navConstitution">Constitution</a>
+        <a href="login.html" data-nav="login" class="portal-button" data-i18n="navPortal">Staff Portal</a>
+        <button class="language-toggle" type="button" id="language-toggle">Русский</button>
     </nav>
-
 </header>
-
 <section class="hero">
-
-    <img src="flag.png" alt="Treekian Flag">
-
-    <div class="hero-overlay">
-
-        <h2>Treekian Union of Socialist Republics</h2>
-
-        <p>
-            Official Government Website
-        </p>
-
-    </div>
-
+    <img src="flag.png" alt="Treekian Flag" onerror="this.classList.add('missing-hero-image')">
+    <div class="hero-overlay"><p class="page-kicker" id="page-kicker"></p><h2 id="page-title">Loading</h2><p id="page-subtitle"></p></div>
 </section>
-
-<main>
-
-<section class="welcome">
-
-<h2>Welcome</h2>
-
-<p>
-
-Welcome to the official Government Portal of the Treekian Union of Socialist Republics.
-
-This website provides official information regarding the Government, Armed Forces,
-ministries, national policies, economy, and constitutional framework of Treekia.
-
-</p>
-
-</section>
-
-<section class="quick-links">
-
-<h2>Government Services</h2>
-
-<div class="cards">
-
-<a href="government.html" class="card">
-
-<h3>Government</h3>
-
-<p>
-
-View the President, ministries and government structure.
-
-</p>
-
-</a>
-
-<a href="defence.html" class="card">
-
-<h3>Defence</h3>
-
-<p>
-
-Information regarding the Treekian Armed Forces.
-
-</p>
-
-</a>
-
-<a href="economy.html" class="card">
-
-<h3>Economy</h3>
-
-<p>
-
-National currency, population and statistics.
-
-</p>
-
-</a>
-
-<a href="culture.html" class="card">
-
-<h3>Culture</h3>
-
-<p>
-
-Official languages, national symbols and traditions.
-
-</p>
-
-</a>
-
-<a href="constitution.html" class="card">
-
-<h3>Constitution</h3>
-
-<p>
-
-Read the constitutional documents of Treekia.
-
-</p>
-
-</a>
-
-<a href="login.html" class="card">
-
-<h3>Staff Portal</h3>
-
-<p>
-
-Authorised government personnel only.
-
-</p>
-
-</a>
-
-</div>
-
-</section>
-
-<section class="overview">
-
-<h2>National Overview</h2>
-
-<table>
-
-<tr>
-<th>Official Name</th>
-<td>Treekian Union of Socialist Republics</td>
-</tr>
-
-<tr>
-<th>Common Name</th>
-<td>Treekia</td>
-</tr>
-
-<tr>
-<th>President</th>
-<td>William</td>
-</tr>
-
-<tr>
-<th>Population</th>
-<td>14</td>
-</tr>
-
-<tr>
-<th>Currency</th>
-<td>Treek (₸)</td>
-</tr>
-
-<tr>
-<th>ISO Code</th>
-<td>TRK</td>
-</tr>
-
-<tr>
-<th>Official Languages</th>
-<td>Russian, English</td>
-</tr>
-
-<tr>
-<th>Driving Side</th>
-<td>Left</td>
-</tr>
-
-<tr>
-<th>Time Zone</th>
-<td>TST (UTC+12) / TDT (UTC+13)</td>
-</tr>
-
-</table>
-
-</section>
-
-<section class="government-preview">
-
-<h2>Government</h2>
-
-<div class="cards">
-
-<div class="card">
-
-<h3>President</h3>
-
-<p>
-
-President William
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>Armed Forces</h3>
-
-<p>
-
-Army, Air Force and Navy
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>Committee of State Security</h3>
-
-<p>
-
-National Security Agency
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>Ministries</h3>
-
-<p>
-
-Foreign Affairs, Truth Speaking and National Nuclear Programme
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-</main>
-
+<main id="content"></main>
 <footer>
-
-<img src="css.png" alt="Committee of State Security Seal">
-
-<h3>Committee of State Security</h3>
-
-<p>
-
-Seal of Approval
-
-</p>
-
-<p>
-
-Government of the Treekian Union of Socialist Republics
-
-</p>
-
-<p>
-
-© 2026 Government of Treekia
-
-</p>
-
+    <img src="css.png" alt="Committee of State Security Seal" onerror="this.style.display='none'">
+    <h3 data-i18n="cssName">Committee of State Security</h3>
+    <p data-i18n="seal">Seal of Approval</p>
+    <p data-i18n="siteTitle">Government of the New Treekian Union of the Socialist Republics</p>
+    <p>© 2026 Government of Treekia</p>
 </footer>
-
 </body>
 </html>
