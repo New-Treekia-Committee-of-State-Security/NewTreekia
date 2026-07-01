@@ -1,260 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Treekian Army | Ministry of Defence</title>
-
-<link rel="stylesheet" href="style.css">
-<script src="script.js" defer></script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Army | New Treekian Union</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
-
-<body>
-
+<body data-page="army">
 <header>
-
-<div class="top-header">
-
-<img src="coatofarms.png" class="coa" alt="Coat of Arms">
-
-<div class="title">
-
-<h1>Government of the Treekian Union of Socialist Republics</h1>
-<p>Official Government Portal</p>
-
-</div>
-
-</div>
-
-<nav>
-
-<a href="index.html">Home</a>
-<a href="government.html">Government</a>
-<a href="defence.html" class="active">Defence</a>
-<a href="economy.html">Economy</a>
-<a href="culture.html">Culture</a>
-<a href="constitution.html">Constitution</a>
-<a href="login.html" class="portal-button">Staff Portal</a>
-
-</nav>
-
+    <div class="top-header">
+        <a href="index.html" class="brand-link" aria-label="Home"><img src="coatofarms.png" class="coa" alt="Coat of Arms" onerror="this.style.display='none'"></a>
+        <div class="title"><h1 data-i18n="siteTitle">Government of the New Treekian Union of the Socialist Republics</h1><p data-i18n="portalTitle">Official Government Portal</p></div>
+        <button class="mobile-menu" type="button" aria-expanded="false" aria-controls="main-nav" data-i18n="menu">Menu</button>
+    </div>
+    <nav id="main-nav">
+        <a href="index.html" data-nav="home" data-i18n="navHome">Home</a>
+        <a href="government.html" data-nav="government" data-i18n="navGovernment">Government</a>
+        <a href="officials.html" data-nav="officials" data-i18n="navOfficials">Officials</a>
+        <a href="defence.html" data-nav="defence" data-i18n="navDefence">Defence</a>
+        <a href="economy.html" data-nav="economy" data-i18n="navEconomy">Economy</a>
+        <a href="culture.html" data-nav="culture" data-i18n="navCulture">Culture</a>
+        <a href="constitution.html" data-nav="constitution" data-i18n="navConstitution">Constitution</a>
+        <a href="login.html" data-nav="login" class="portal-button" data-i18n="navPortal">Staff Portal</a>
+        <button class="language-toggle" type="button" id="language-toggle">Русский</button>
+    </nav>
 </header>
-
 <section class="hero">
-
-<img src="flag.png" alt="Treekian Flag">
-
-<div class="hero-overlay">
-
-<h2>Treekian Army</h2>
-
-<p>
-
-Strength • Readiness • Discipline
-
-</p>
-
-</div>
-
+    <img src="flag.png" alt="Treekian Flag" onerror="this.classList.add('missing-hero-image')">
+    <div class="hero-overlay"><p class="page-kicker" id="page-kicker"></p><h2 id="page-title">Loading</h2><p id="page-subtitle"></p></div>
 </section>
-
-<main>
-
-<section>
-
-<h2>Overview</h2>
-
-<p>
-
-The Treekian Army is the land warfare branch of the Treekian Armed Forces. It is responsible for ground defence, armoured operations, national security support, and military readiness.
-
-</p>
-
-</section>
-
-<section>
-
-<h2>Command</h2>
-
-<table>
-
-<tr>
-<th>Commander</th>
-<td>General Ben</td>
-</tr>
-
-<tr>
-<th>Branch</th>
-<td>Army</td>
-</tr>
-
-<tr>
-<th>Reports To</th>
-<td>President William</td>
-</tr>
-
-<tr>
-<th>Status</th>
-<td>Active Service</td>
-</tr>
-
-</table>
-
-</section>
-
-<section>
-
-<h2>Mission</h2>
-
-<p>
-
-To defend the Treekian Union through professional ground operations, rapid deployment, and effective armoured capability while supporting national security objectives.
-
-</p>
-
-</section>
-
-<section>
-
-<h2>Equipment Inventory</h2>
-
-<table>
-
-<tr>
-<th>Equipment</th>
-<th>Status</th>
-</tr>
-
-<tr>
-<td>T-55 Main Battle Tank</td>
-<td>In Service</td>
-</tr>
-
-<tr>
-<td>BTR-80 Armoured Personnel Carrier</td>
-<td>In Service</td>
-</tr>
-
-<tr>
-<td>BMP-1 Infantry Fighting Vehicle</td>
-<td>In Service</td>
-</tr>
-
-<tr>
-<td>T-60 Light Tank</td>
-<td>On Order</td>
-</tr>
-
-</table>
-
-</section>
-
-<section>
-
-<h2>Organisation</h2>
-
-<div class="cards">
-
-<div class="card">
-
-<h3>Armoured Corps</h3>
-
-<p>
-
-Responsible for the operation of armoured fighting vehicles.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>Infantry Corps</h3>
-
-<p>
-
-Primary ground combat force of the Army.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>Logistics Corps</h3>
-
-<p>
-
-Responsible for transportation, maintenance and military supply.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>Training Command</h3>
-
-<p>
-
-Provides military instruction and operational readiness.
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<h2>Army Values</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>Loyalty</h3>
-<p>Service to the nation above self.</p>
-</div>
-
-<div class="card">
-<h3>Discipline</h3>
-<p>Professional standards in all operations.</p>
-</div>
-
-<div class="card">
-<h3>Courage</h3>
-<p>Meeting challenges with determination.</p>
-</div>
-
-<div class="card">
-<h3>Integrity</h3>
-<p>Honesty and accountability in military service.</p>
-</div>
-
-</div>
-
-</section>
-
-</main>
-
+<main id="content"></main>
 <footer>
-
-<img src="css.png" alt="Committee of State Security Seal">
-
-<h3>Committee of State Security</h3>
-
-<p>Seal of Approval</p>
-
-<p>Government of the Treekian Union of Socialist Republics</p>
-
+    <img src="css.png" alt="Committee of State Security Seal" onerror="this.style.display='none'">
+    <h3 data-i18n="cssName">Committee of State Security</h3>
+    <p data-i18n="seal">Seal of Approval</p>
+    <p data-i18n="siteTitle">Government of the New Treekian Union of the Socialist Republics</p>
+    <p>© 2026 Government of Treekia</p>
 </footer>
-
 </body>
-
 </html>
