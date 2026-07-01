@@ -1,191 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Constitution | Government of the Treekian Union</title>
-
-<link rel="stylesheet" href="style.css">
-<script src="script.js" defer></script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constitution | New Treekian Union</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
-
-<body>
-
+<body data-page="constitution">
 <header>
-
-<div class="top-header">
-
-<img src="coatofarms.png" class="coa" alt="Coat of Arms">
-
-<div class="title">
-
-<h1>Government of the Treekian Union of Socialist Republics</h1>
-<p>Official Government Portal</p>
-
-</div>
-
-</div>
-
-<nav>
-
-<a href="index.html">Home</a>
-<a href="government.html">Government</a>
-<a href="defence.html">Defence</a>
-<a href="economy.html">Economy</a>
-<a href="culture.html">Culture</a>
-<a href="constitution.html" class="active">Constitution</a>
-<a href="login.html" class="portal-button">Staff Portal</a>
-
-</nav>
-
+    <div class="top-header">
+        <a href="index.html" class="brand-link" aria-label="Home"><img src="coatofarms.png" class="coa" alt="Coat of Arms" onerror="this.style.display='none'"></a>
+        <div class="title"><h1 data-i18n="siteTitle">Government of the New Treekian Union of the Socialist Republics</h1><p data-i18n="portalTitle">Official Government Portal</p></div>
+        <button class="mobile-menu" type="button" aria-expanded="false" aria-controls="main-nav" data-i18n="menu">Menu</button>
+    </div>
+    <nav id="main-nav">
+        <a href="index.html" data-nav="home" data-i18n="navHome">Home</a>
+        <a href="government.html" data-nav="government" data-i18n="navGovernment">Government</a>
+        <a href="officials.html" data-nav="officials" data-i18n="navOfficials">Officials</a>
+        <a href="defence.html" data-nav="defence" data-i18n="navDefence">Defence</a>
+        <a href="economy.html" data-nav="economy" data-i18n="navEconomy">Economy</a>
+        <a href="culture.html" data-nav="culture" data-i18n="navCulture">Culture</a>
+        <a href="constitution.html" data-nav="constitution" data-i18n="navConstitution">Constitution</a>
+        <a href="login.html" data-nav="login" class="portal-button" data-i18n="navPortal">Staff Portal</a>
+        <button class="language-toggle" type="button" id="language-toggle">Русский</button>
+    </nav>
 </header>
-
 <section class="hero">
-
-<img src="flag.png" alt="Treekian Flag">
-
-<div class="hero-overlay">
-
-<h2>Constitution of Treekia</h2>
-
-<p>
-
-Law • Structure • National Principles
-
-</p>
-
-</div>
-
+    <img src="flag.png" alt="Treekian Flag" onerror="this.classList.add('missing-hero-image')">
+    <div class="hero-overlay"><p class="page-kicker" id="page-kicker"></p><h2 id="page-title">Loading</h2><p id="page-subtitle"></p></div>
 </section>
-
-<main>
-
-<section>
-
-<h2>Preamble</h2>
-
-<p>
-
-We, the people of the Treekian Union of Socialist Republics, in order to form a more perfect union, establish justice, ensure national stability, provide for the common defence, and secure the blessings of liberty and order, do hereby establish this Constitution for the governance of our nation.
-
-</p>
-
-</section>
-
-<section>
-
-<h2>Article I — The State</h2>
-
-<p>
-
-The Treekian Union of Socialist Republics is a sovereign socialist state governed under a centralized system of administration. All authority is derived from the national structure established by this Constitution.
-
-</p>
-
-</section>
-
-<section>
-
-<h2>Article II — The President</h2>
-
-<p>
-
-The President is the Head of State and Commander-in-Chief of the Armed Forces. The President holds executive authority and oversees national governance, appointments, and state direction.
-
-</p>
-
-</section>
-
-<section>
-
-<h2>Article III — Government Structure</h2>
-
-<p>
-
-The Government shall consist of ministries, armed forces, and administrative bodies, each responsible for their designated national functions under presidential oversight.
-
-</p>
-
-</section>
-
-<section>
-
-<h2>Article IV — Armed Forces</h2>
-
-<p>
-
-The Treekian Armed Forces are responsible for the defence of the nation and consist of the Army, Air Force, and Navy, operating under unified command.
-
-</p>
-
-</section>
-
-<section>
-
-<h2>Article V — State Security</h2>
-
-<p>
-
-The Committee of State Security (CSS) is responsible for internal security, intelligence, and the protection of national sovereignty.
-
-</p>
-
-</section>
-
-<section>
-
-<h2>Article VI — National Identity</h2>
-
-<p>
-
-The national symbols, language, currency, and cultural identity of Treekia are protected under this Constitution and represent the unity of the state.
-
-</p>
-
-</section>
-
-<section>
-
-<h2>Article VII — Amendments</h2>
-
-<p>
-
-This Constitution may be amended by directive of the President or through formal governmental restructuring approved by national authority.
-
-</p>
-
-</section>
-
-<section>
-
-<h2>Conclusion</h2>
-
-<p>
-
-This Constitution serves as the foundational legal document of the Treekian Union of Socialist Republics and defines the principles upon which the nation is governed.
-
-</p>
-
-</section>
-
-</main>
-
+<main id="content"></main>
 <footer>
-
-<img src="css.png" alt="Committee of State Security Seal">
-
-<h3>Committee of State Security</h3>
-
-<p>Seal of Approval</p>
-
-<p>Government of the Treekian Union of Socialist Republics</p>
-
+    <img src="css.png" alt="Committee of State Security Seal" onerror="this.style.display='none'">
+    <h3 data-i18n="cssName">Committee of State Security</h3>
+    <p data-i18n="seal">Seal of Approval</p>
+    <p data-i18n="siteTitle">Government of the New Treekian Union of the Socialist Republics</p>
+    <p>© 2026 Government of Treekia</p>
 </footer>
-
 </body>
-
 </html>
