@@ -1,207 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Government | Treekian Union of Socialist Republics</title>
-
-<link rel="stylesheet" href="style.css">
-<script src="script.js" defer></script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Government | New Treekian Union</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
-
-<body>
-
+<body data-page="government">
 <header>
-
-<div class="top-header">
-
-<img src="coatofarms.png" class="coa">
-
-<div class="title">
-
-<h1>Government of the Treekian Union of Socialist Republics</h1>
-
-<p>Official Government Portal</p>
-
-</div>
-
-</div>
-
-<nav>
-
-<a href="index.html">Home</a>
-
-<a href="government.html" class="active">Government</a>
-
-<a href="defence.html">Defence</a>
-
-<a href="economy.html">Economy</a>
-
-<a href="culture.html">Culture</a>
-
-<a href="constitution.html">Constitution</a>
-
-<a href="login.html" class="portal-button">Staff Portal</a>
-
-</nav>
-
+    <div class="top-header">
+        <a href="index.html" class="brand-link" aria-label="Home"><img src="coatofarms.png" class="coa" alt="Coat of Arms" onerror="this.style.display='none'"></a>
+        <div class="title"><h1 data-i18n="siteTitle">Government of the New Treekian Union of the Socialist Republics</h1><p data-i18n="portalTitle">Official Government Portal</p></div>
+        <button class="mobile-menu" type="button" aria-expanded="false" aria-controls="main-nav" data-i18n="menu">Menu</button>
+    </div>
+    <nav id="main-nav">
+        <a href="index.html" data-nav="home" data-i18n="navHome">Home</a>
+        <a href="government.html" data-nav="government" data-i18n="navGovernment">Government</a>
+        <a href="officials.html" data-nav="officials" data-i18n="navOfficials">Officials</a>
+        <a href="defence.html" data-nav="defence" data-i18n="navDefence">Defence</a>
+        <a href="economy.html" data-nav="economy" data-i18n="navEconomy">Economy</a>
+        <a href="culture.html" data-nav="culture" data-i18n="navCulture">Culture</a>
+        <a href="constitution.html" data-nav="constitution" data-i18n="navConstitution">Constitution</a>
+        <a href="login.html" data-nav="login" class="portal-button" data-i18n="navPortal">Staff Portal</a>
+        <button class="language-toggle" type="button" id="language-toggle">Русский</button>
+    </nav>
 </header>
-
 <section class="hero">
-
-<img src="flag.png">
-
-<div class="hero-overlay">
-
-<h2>Government</h2>
-
-<p>
-
-Executive Leadership and National Administration
-
-</p>
-
-</div>
-
+    <img src="flag.png" alt="Treekian Flag" onerror="this.classList.add('missing-hero-image')">
+    <div class="hero-overlay"><p class="page-kicker" id="page-kicker"></p><h2 id="page-title">Loading</h2><p id="page-subtitle"></p></div>
 </section>
-
-<main>
-
-<section>
-
-<h2>Government Overview</h2>
-
-<p>
-
-The Government of the Treekian Union of Socialist Republics is headed by the President and supported by ministries, the Armed Forces, and the Committee of State Security.
-
-</p>
-
-</section>
-
-<section>
-
-<h2>Executive Leadership</h2>
-
-<div class="cards">
-
-<a href="president.html" class="card">
-
-<h3>President</h3>
-
-<p>
-
-President William
-
-<br><br>
-
-Head of State
-
-</p>
-
-</a>
-
-<a href="ministries.html" class="card">
-
-<h3>Ministries</h3>
-
-<p>
-
-Government departments responsible for national administration.
-
-</p>
-
-</a>
-
-<a href="css.html" class="card">
-
-<h3>Committee of State Security</h3>
-
-<p>
-
-Internal security and intelligence.
-
-</p>
-
-</a>
-
-</div>
-
-</section>
-
-<section>
-
-<h2>Government Officials</h2>
-
-<table>
-
-<tr>
-<th>Office</th>
-<th>Office Holder</th>
-</tr>
-
-<tr>
-<td>President</td>
-<td>William</td>
-</tr>
-
-<tr>
-<td>General of the Army</td>
-<td>Ben</td>
-</tr>
-
-<tr>
-<td>Air Marshal</td>
-<td>Nico Cage</td>
-</tr>
-
-<tr>
-<td>General of the Navy</td>
-<td>Vacant</td>
-</tr>
-
-<tr>
-<td>Head of Publicity</td>
-<td>Matthew the Great</td>
-</tr>
-
-<tr>
-<td>General of Foreign Affairs</td>
-<td>Christian</td>
-</tr>
-
-<tr>
-<td>Head of Nuclear Programme</td>
-<td>Noah</td>
-</tr>
-
-<tr>
-<td>Chairman of the Committee of State Security</td>
-<td>Commander</td>
-</tr>
-
-</table>
-
-</section>
-
-</main>
-
+<main id="content"></main>
 <footer>
-
-<img src="css.png">
-
-<h3>Committee of State Security</h3>
-
-<p>Seal of Approval</p>
-
-<p>Government of the Treekian Union of Socialist Republics</p>
-
+    <img src="css.png" alt="Committee of State Security Seal" onerror="this.style.display='none'">
+    <h3 data-i18n="cssName">Committee of State Security</h3>
+    <p data-i18n="seal">Seal of Approval</p>
+    <p data-i18n="siteTitle">Government of the New Treekian Union of the Socialist Republics</p>
+    <p>© 2026 Government of Treekia</p>
 </footer>
-
 </body>
-
 </html>
